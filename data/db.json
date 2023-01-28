@@ -1,0 +1,47 @@
+{
+  "recipes": [
+    {
+      "id": "1",
+      "title": "Mish-Mash",
+      "ingredients": [
+        "2 Tablesppons veggie oil",
+        "2 red bell peppers",
+        "3 tomatoes",
+        "1 onion ",
+        "2 cloves garlic",
+        "1 lb sirene or feta cheese",
+        "6 eggs beaten",
+        "2 tablespoons chopped parsley",
+        "Salt",
+        "Pepper"  
+      ],
+      "method": "1.Finely dice bell peppers. Coarsely chop tomatoes. 2.In a large heavy skillet, heat vegetable oil over medium heat. First, add the onions and garlic, and sauté for about 2 minutes, until the onions are soft, but not completely cooked. 3.Add the bell peppers and mix well. Cover and cook for about 5 minutes. 4. Add the tomatoes, stir, cover and cook for another 5 to 7 minutes. 5.Add the sirene and mix. Pour the eggs. Stir occasionally until the mixture is less liquid.6.Finally add the parsley and cook for a minute before removing from heat. 7.Serve hot",
+      "cookingTime": "35 minutes"
+    },
+    {
+      "id": "2",
+      "title": "Avocado and Smoked Salmon",
+      "ingredients": [
+        "148g of smoked salmon",
+        "0.5 avocados",
+        "fresh lemon juice",
+        "black pepper"
+      ],
+      "method": "1. No preparation required!just grab and enjoy 2.Season with fresh lemon juice and black pepper to taste",
+      "cookingTime": "5 minutes"
+    },
+    {
+      "id": "3",
+      "title": "Greek Salad",
+      "ingredients": [
+        "1 Onion",
+        "1 Block of Feta",
+        "Olives",
+        "Tomatoes",
+        "Olive Oil"
+      ],
+      "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
+      "cookingTime": "35 minutes"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.preferences": {},
+  "emmet.showSuggestionsAsSnippets": true,
+  "eslint.format.enable": true,
+  "emmet.triggerExpansionOnTab": true,
+  "reactSnippets.settings.prettierEnabled": true,
+  "reactSnippets.settings.importReactOnTop": true
+}
