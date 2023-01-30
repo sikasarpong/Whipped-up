@@ -17,7 +17,7 @@
 .recipe li {
     list-style-type: none;
     margin-right: 10px;
-    color: #777;
+    color: #fff;
 }
 
 .recipe li::after {
@@ -34,7 +34,8 @@
 }
 
 /* dark mode */
+.recipe.dark .page-title h2,
 .recipe.dark {
-    background: #555;
-    color: #e4e4e4;
+    background: #263238;
+    color: #efefef;
 }

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useTheme } from '../../hooks/useTheme'
 
 import { db } from '../../firebase/config'
-import { doc, getDocs } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
 
 // styles
 import "./Recipe.css";
@@ -17,8 +17,9 @@ export default function Recipe() {
     const [error, setError] = useState(null)
 
     useEffect(() => {
-        const ref = doc(db, 'recipes', "id")
-        getDocs(ref).then((doc) => {
+        const ref = doc(db, 'recipes', id)
+        // const docSnap = await
+        getDoc(ref).then((doc) => {
             if (doc.exists()) {
                 // setIsPending(false)
                 setRecipe(doc.data())
@@ -38,7 +39,7 @@ export default function Recipe() {
                 <h2 className="page-title">{recipe.title}</h2>
                 <p>Takes {recipe.cookingTime} to cook.</p>
                 <ul>
-                    {recipe.ingredients.map(ing => <li key={ing}>ing</li>)}
+                    {recipe.ingredients.map(ing => <li key={ing}>{ing}</li>)}
                 </ul>
                 <p className="method">{recipe.method}</p>
             </>
