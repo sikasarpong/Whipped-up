@@ -39,7 +39,7 @@ textarea {
 .page-title {
   text-align: center;
   margin: 40px auto;
-  color: #333;
+  color: rgb(10, 10, 10);
 }
 
 .loading,
