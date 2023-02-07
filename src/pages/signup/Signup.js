@@ -9,14 +9,14 @@ import "./Signup.css";
 export default function Signup() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    // const [displayName, setDisplayName] = useState('')
-    const { error, signup } = useSignup()
+    const [displayName, setDisplayName] = useState('')
+    const { signup, isPending,error } = useSignup()
 
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        signup(email, password)
-        // console.log(email, password, displayName)
+        signup(email, password, displayName)
+        console.log(email, password, displayName)
     }
 
 
@@ -39,15 +39,16 @@ export default function Signup() {
                     value={password}
                 />
             </label>
-            {/* <label>
+            <label>
                 <span>display name:</span>
                 <input
                     type="text"
                     onChange={(e) => setDisplayName(e.target.value)}
                     value={displayName}
                 />
-            </label> */}
-            <button className="btn">Sign up</button>
+            </label>
+            {!isPending && <button className="btn">Sign up</button>}
+            {isPending && <button className="btn" disabled>loading</button>}
             {error && <p>{error}</p>}
         </form>
     )

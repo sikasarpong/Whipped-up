@@ -37,7 +37,7 @@
     line-height: 1.5em;
 }
 
-.recipe-list .card a {
+.recipe-list .card a, button {
     color: #555;
     text-decoration: none;
     display: block;

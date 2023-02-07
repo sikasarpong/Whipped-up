@@ -1,0 +1,50 @@
+.create {
+    color: #555;
+    max-width: 480px;
+    margin: 60px auto;
+}
+
+.create label span {
+    display: block;
+    margin: 30px 0 10px;
+}
+
+.create p {
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.create button {
+    display: block;
+    width: 100px;
+    font-size: 1em;
+    color: #fff;
+    padding: 8px 20px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #263238;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 20px auto;
+}
+
+.ingredients {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.ingredients span {
+    display: block;
+    margin: 30px 0 10px;
+    text-align: center;
+}
+.ingredient {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+.ingredient button {
+    margin: 0 0 0 10px;
+}
+

@@ -1,17 +1,22 @@
 import { Link } from 'react-router-dom'
 import { useTheme } from '../hooks/useTheme'
 
+
 // styles
 import './RecipeList.css'
 
 
-export default function RecipeList({ recipes }) {
+export default function RecipeList({ recipes, removeRecipe }) {
     const { mode } = useTheme()
+
+
 
 
     if (recipes.length === 0) {
         return <div className='error'>No recipes available...</div>
     }
+
+
     return (
         <div className="recipe-list">
             {recipes.map(recipe => (
@@ -20,6 +25,7 @@ export default function RecipeList({ recipes }) {
                     <p>{recipe.cookingTime} to make.</p>
                     <div>{recipe.method}...</div>
                     <Link to={`/recipes/${recipe.id}`}>Whip this </Link>
+                    <button className="remove" onClick={() => removeRecipe(recipe.id)}>Remove</button>
                 </div>
             ))}
         </div>

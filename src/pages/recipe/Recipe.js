@@ -37,7 +37,7 @@ export default function Recipe() {
         {recipe && (
             <>
                 <h2 className="page-title">{recipe.title}</h2>
-                <p>Takes {recipe.cookingTime} to cook.</p>
+                <p>Takes {recipe.cookingTime} minutes to cook.</p>
                 <ul>
                     {recipe.ingredients.map(ing => <li key={ing}>{ing}</li>)}
                 </ul>
