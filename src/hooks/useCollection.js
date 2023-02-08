@@ -9,6 +9,7 @@ export const useCollection = (c, _q) => {
     // set up query
     const q = useRef(_q).current
 
+
     useEffect(() => {
         let ref = collection(db, c)
 

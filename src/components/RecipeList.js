@@ -22,7 +22,7 @@ export default function RecipeList({ recipes, removeRecipe }) {
             {recipes.map(recipe => (
                 <div key={recipe.id} className={`card ${mode}`}>
                     <h3>{recipe.title}</h3>
-                    <p>{recipe.cookingTime} to make.</p>
+                    <p>{recipe.cookingTime} minutes to make.</p>
                     <div>{recipe.method}...</div>
                     <Link to={`/recipes/${recipe.id}`}>Whip this </Link>
                     <button className="remove" onClick={() => removeRecipe(recipe.id)}>Remove</button>

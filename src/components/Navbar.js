@@ -7,6 +7,7 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 // import styles from "./Navbar.css";
 import "./Navbar.css";
+import Searchbar from "./Searchbar";
 
 
 export default function Navbar() {
@@ -39,6 +40,7 @@ export default function Navbar() {
                     </li>
                     </>
                 )}
+                <Searchbar />
                 <li><Link to="/create">Create Recipe</Link></li>
             </ul>
 

@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 // import { useHistory } from 'react-router-dom'
 import { db } from '../../firebase/config'
 // import { auth } from '../../firebase/config'
-import { addDoc, collection } from 'firebase/firestore'
+import { addDoc, collection,  serverTimestamp} from 'firebase/firestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 
 
@@ -21,6 +21,7 @@ export default function Create() {
     // const [recipes, setRecipe] = useState([])
 
     const recipesCollectionRef = collection(db, "recipes")
+    // const q = query(recipesCollectionRef, orderBy('createdAt'))
 
 
     const { user } = useAuthContext()
@@ -35,7 +36,8 @@ export default function Create() {
             ingredients,
             method,
             cookingTime,
-            uid: user.uid
+            uid: user.uid,
+            createdAt:serverTimestamp()
         })
 
         setTitle('')
