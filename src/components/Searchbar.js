@@ -1,16 +1,27 @@
 import { useState } from 'react'
 import { useHistory } from 'react-router-dom'
+// import { db } from '../firebase/config'
+// import { collection, onSnapshot, doc, query, where } from 'firebase/firestore'
+
 
 // styles
 import './Searchbar.css'
 
 export default function Searchbar() {
     const [term, setTerm] = useState('')
+
+
     const history = useHistory()
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
+        // onSnapshot(q, (snapshot) => {
+        //     let result = []
+        //     snapshot.docs.forEach(doc => {
+        //         result.push({ ...doc.data(), id: doc.id })
+        //     })
+        //     setTerm(result)
+        // })
         history.push(`/search?q=${term}`)
     }
 
@@ -28,3 +39,4 @@ export default function Searchbar() {
         </div>
     )
 }
+

@@ -1,10 +1,10 @@
-import { useState, useRef } from 'react'
-// import { useHistory } from 'react-router-dom'
+import { useState, useEffect, useRef } from 'react'
+import { useFetch } from '../../hooks/useFetch'
 import { db } from '../../firebase/config'
 // import { auth } from '../../firebase/config'
-import { addDoc, collection,  serverTimestamp} from 'firebase/firestore'
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
-
+import { useHistory } from 'react-router-dom'
 
 
 // styles
@@ -22,13 +22,15 @@ export default function Create() {
 
     const recipesCollectionRef = collection(db, "recipes")
     // const q = query(recipesCollectionRef, orderBy('createdAt'))
-
+    const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST')
+    const history = useHistory()
 
     const { user } = useAuthContext()
 
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        postData({ title, ingredients, method, cookingTime: cookingTime + ' minutes' })
 
 
         await addDoc(recipesCollectionRef, {
@@ -37,7 +39,7 @@ export default function Create() {
             method,
             cookingTime,
             uid: user.uid,
-            createdAt:serverTimestamp()
+            createdAt: serverTimestamp()
         })
 
         setTitle('')
@@ -56,6 +58,13 @@ export default function Create() {
         setNewIngredient('')
         ingredientInput.current.focus()
     }
+
+    // redirect the user when we get data response
+    useEffect(() => {
+        if (data) {
+            history.push('/')
+        }
+    }, [data, history])
 
     return (
         <div className="create">
