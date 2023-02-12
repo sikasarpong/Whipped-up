@@ -17,11 +17,11 @@ export default function Home() {
         ['uid', '==', user.uid]
     )
 
-return (
-    <div>
-        {recipes && <RecipeList recipes={recipes} />}
+    return (
+        <div>
+            {recipes && <RecipeList recipes={recipes} />}
 
-    </div>
-)
+        </div>
+    )
 }
 

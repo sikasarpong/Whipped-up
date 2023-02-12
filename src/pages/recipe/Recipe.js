@@ -2,7 +2,7 @@ import { useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { useTheme } from '../../hooks/useTheme'
 import { db } from '../../firebase/config'
-import { doc,  onSnapshot, updateDoc } from 'firebase/firestore';
+import { doc, onSnapshot, updateDoc } from 'firebase/firestore';
 
 import UpdateRecipe from './UpdateRecipe'
 
@@ -31,7 +31,7 @@ export default function Recipe() {
     useEffect(() => {
         const ref = doc(db, 'recipes', id)
         // const docSnap = await
-        const unsub = onSnapshot(ref,(doc) => {
+        const unsub = onSnapshot(ref, (doc) => {
             if (doc.exists()) {
                 // setIsPending(false)
                 setRecipe(doc.data())

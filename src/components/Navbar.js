@@ -1,9 +1,8 @@
-// styles
 import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useTheme } from "../hooks/useTheme";
 import { useAuthContext } from "../hooks/useAuthContext";
-// import { ThemeContext } from "../context/ThemeContext";
+
 
 // import styles from "./Navbar.css";
 import "./Navbar.css";
@@ -34,10 +33,10 @@ export default function Navbar() {
 
                 {user && (
                     <>
-                    <li>Hello, {user.displayName}</li>
-                    <li>
-                        <button className='btn' onClick={logout}>Logout</button>
-                    </li>
+                        <li>Hello, {user.displayName}</li>
+                        <li>
+                            <button className='btn' onClick={logout}>Logout</button>
+                        </li>
                     </>
                 )}
                 <Searchbar />
