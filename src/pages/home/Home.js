@@ -14,7 +14,8 @@ export default function Home() {
     const { user } = useAuthContext()
     const { documents: recipes } = useCollection(
         'recipes',
-        ['uid', '==', user.uid]
+        ['uid', '==', user.uid],
+        ["createdAt", "desc"]
     )
 
     return (
