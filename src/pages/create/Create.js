@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
-import { useFetch } from '../../hooks/useFetch'
+import { useState,  useRef } from 'react'
 import { db } from '../../firebase/config'
 // import { auth } from '../../firebase/config'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
@@ -18,11 +17,10 @@ export default function Create() {
     const [newIngredient, setNewIngredient] = useState('')
     const [ingredients, setIngredients] = useState([])
     const ingredientInput = useRef(null)
-    // const [recipes, setRecipe] = useState([])
+
 
     const recipesCollectionRef = collection(db, "recipes")
-    // const q = query(recipesCollectionRef, orderBy('createdAt'))
-    const { postData, data } = useFetch('http://localhost:3000/recipes', 'POST')
+    
     const history = useHistory()
 
     const { user } = useAuthContext()
@@ -30,17 +28,21 @@ export default function Create() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        postData({ title, ingredients, method, cookingTime: cookingTime + ' minutes' })
+        try {
+            await addDoc(recipesCollectionRef, {
+                title,
+                ingredients,
+                method,
+                cookingTime,
+                uid: user.uid,
+                createdAt: serverTimestamp()
+            })
 
-
-        await addDoc(recipesCollectionRef, {
-            title,
-            ingredients,
-            method,
-            cookingTime,
-            uid: user.uid,
-            createdAt: serverTimestamp()
-        })
+            // redirect the user when we get data response
+            history.push('/')
+        } catch (err) {
+            console.log(err)
+        }
 
         setTitle('')
         setMethod('')
@@ -59,12 +61,6 @@ export default function Create() {
         ingredientInput.current.focus()
     }
 
-    // redirect the user when we get data response
-    useEffect(() => {
-        if (data) {
-            history.push('/')
-        }
-    }, [data, history])
 
     return (
         <div className="create">
