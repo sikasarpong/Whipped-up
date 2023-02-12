@@ -13,7 +13,7 @@
         "6 eggs beaten",
         "2 tablespoons chopped parsley",
         "Salt",
-        "Pepper"  
+        "Pepper"
       ],
       "method": "1.Finely dice bell peppers. Coarsely chop tomatoes. 2.In a large heavy skillet, heat vegetable oil over medium heat. First, add the onions and garlic, and sauté for about 2 minutes, until the onions are soft, but not completely cooked. 3.Add the bell peppers and mix well. Cover and cook for about 5 minutes. 4. Add the tomatoes, stir, cover and cook for another 5 to 7 minutes. 5.Add the sirene and mix. Pour the eggs. Stir occasionally until the mixture is less liquid.6.Finally add the parsley and cook for a minute before removing from heat. 7.Serve hot",
       "cookingTime": "35 minutes"
@@ -42,6 +42,69 @@
       ],
       "method": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minima ex rem quis similique eum ratione quaerat, voluptas molestias ut repudiandae delectus voluptates. Eius esse at tenetur ab accusamus excepturi?",
       "cookingTime": "35 minutes"
+    },
+    {
+      "title": "Chia & Oat Pudding",
+      "ingredients": [
+        "1 tbsp chia seeds",
+        "30g rolled oats",
+        "250ml unsweetened almond milk",
+        "1 tsp maple syrup",
+        "2 tbsp hazelnuts",
+        "½ tsp vanilla extract",
+        "50g mixed berries to top",
+        "2 tsp Shredded coconut to top"
+      ],
+      "method": "Ideally make this the night before, put the chia seeds, rolled oats, almond milk, maple\nsyrup and vanilla extract into a bowl and stir. Next, cover with cling film and put in the\nfridge overnight. When you are ready to eat, finish with your choice of toppings.",
+      "cookingTime": "10 minutes",
+      "id": "CvFfKvq"
+    },
+    {
+      "title": "FJFJKFG",
+      "ingredients": [
+        "THTU",
+        "IIKI",
+        "KKK"
+      ],
+      "method": "GJJKDJDJFFK",
+      "cookingTime": "6 minutes",
+      "id": "wClXrrp"
+    },
+    {
+      "title": "detete",
+      "ingredients": [
+        "d",
+        "de",
+        "del",
+        "delete"
+      ],
+      "method": "to delete ",
+      "cookingTime": "2 minutes",
+      "id": "hQAjIFS"
+    },
+    {
+      "title": "Scrambled Eggs, Avocado and Rye Toast • 2",
+      "ingredients": [
+        "2 eggs",
+        "1 egg white",
+        "½ avocado",
+        "1 piece of rye bread",
+        "1 tsp coconut oil"
+      ],
+      "method": "1. Mash half an avocado using the back of a fork.\n2. Crack the eggs into a bowl, add the egg white and whisk thoroughly. Place the coconut\noil into a pan and heat it up. Cook the egg mixture, stirring continuously until they are\nat your desired consistency.\n3. Toast the rye bread and once done spread the avocado on top. Place the eggs on the\nside.\n4. Serve.",
+      "cookingTime": "12 minutes",
+      "id": "ruufc7f"
+    },
+    {
+      "title": "test",
+      "ingredients": [
+        "t",
+        "e",
+        "s"
+      ],
+      "method": "testng",
+      "cookingTime": "2 minutes",
+      "id": "C7mc_dS"
     }
   ]
 }

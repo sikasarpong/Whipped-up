@@ -14,6 +14,7 @@ export default function RecipeList({ recipes,  }) {
 
 
 
+
     if (recipes.length === 0) {
         return <div className='error'>No recipes available...</div>
     }
@@ -34,7 +35,7 @@ export default function RecipeList({ recipes,  }) {
                 <div key={recipe.id} className={`card ${mode}`}>
                     <h3>{recipe.title}</h3>
                     <p>{recipe.cookingTime} minutes to make.</p>
-                    <div>{recipe.method}...</div>
+                    <div>{recipe.method.substring(0, 100)}..</div>
                     <Link to={`/recipes/${recipe.id}`}>Whip this </Link>
                     <button className="remove" onClick={() => handleClick(recipe.id)}>Remove</button>
 

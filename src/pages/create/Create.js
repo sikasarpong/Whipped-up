@@ -4,6 +4,7 @@ import { db } from '../../firebase/config'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { useAuthContext } from '../../hooks/useAuthContext'
 import { useHistory } from 'react-router-dom'
+import { useFetch } from '../../hooks/useFetch'
 
 
 // styles
@@ -25,9 +26,12 @@ export default function Create() {
 
     const { user } = useAuthContext()
 
+    const { postData  } = useFetch('http://localhost:3000/recipes', 'POST')
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        postData({ title, ingredients, method, cookingTime: cookingTime + ' minutes' })
+    
         try {
             await addDoc(recipesCollectionRef, {
                 title,
