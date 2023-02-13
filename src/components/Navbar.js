@@ -40,7 +40,7 @@ export default function Navbar() {
                     </>
                 )}
                 <Searchbar />
-                <li><Link to="/create">Create Recipe</Link></li>
+                <li className="createRecipe"><Link to="/create">Create Recipe</Link></li>
             </ul>
 
         </nav>
