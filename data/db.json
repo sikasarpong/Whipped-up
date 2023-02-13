@@ -116,6 +116,15 @@
       "method": "test test",
       "cookingTime": "6 minutes",
       "id": "jI0CXXU"
+    },
+    {
+      "title": "VVC",
+      "ingredients": [
+        "BB"
+      ],
+      "method": "RR",
+      "cookingTime": "12 minutes",
+      "id": "eJ2hxjQ"
     }
   ]
 }
