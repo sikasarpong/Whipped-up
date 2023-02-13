@@ -1,14 +1,15 @@
 import { useState, useEffect, useRef } from "react";
 import { db } from "../firebase/config";
-import { collection, onSnapshot, query, where } from "firebase/firestore";
+import { collection, onSnapshot, query, where, orderBy } from "firebase/firestore";
 
 
-export const useCollection = (c, _q) => {
+export const useCollection = (c, _q, _orderBy) => {
     const [documents, setDocuments] = useState(null)
-
+    const [error, setError] = useState(null)
 
     // set up query
     const q = useRef(_q).current
+    const order = useRef(_orderBy).current
 
 
     useEffect(() => {
@@ -16,7 +17,11 @@ export const useCollection = (c, _q) => {
 
 
         if (q) {
-            ref = query(ref, where(...q))
+            ref = query(ref, where(...q),)
+        }
+
+        if (order) {
+            ref = query(ref, where(...q), orderBy(...order))
         }
 
         const unsub = onSnapshot(ref, (snapshot) => {
@@ -26,9 +31,16 @@ export const useCollection = (c, _q) => {
             })
             setDocuments(results)
             console.log(results)
+            setError(null)
+        }, error => {
+            console.log(error)
+            setError('Could not fetch the data')
         })
-        return () => unsub()
-    }, [c, q])
 
-    return { documents }
+        // unsub on unmount
+        return () => unsub()
+
+    }, [c, q, order])
+
+    return { documents, error }
 }

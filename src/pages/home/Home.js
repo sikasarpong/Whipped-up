@@ -12,14 +12,16 @@ import "./Home.css";
 
 export default function Home() {
     const { user } = useAuthContext()
-    const { documents: recipes } = useCollection(
+    const { documents: recipes, error } = useCollection(
         'recipes',
-        ['uid', '==', user.uid],
+        // 'null',
+        ["uid", "==", user.uid],
         ["createdAt", "desc"]
     )
 
     return (
         <div>
+            {error && <p>{error}</p>}
             {recipes && <RecipeList recipes={recipes} />}
 
         </div>
