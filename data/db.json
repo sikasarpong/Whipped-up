@@ -125,6 +125,41 @@
       "method": "RR",
       "cookingTime": "12 minutes",
       "id": "eJ2hxjQ"
+    },
+    {
+      "title": "Breakfast Shake",
+      "ingredients": [
+        "250ml unsweetened nut milk or water",
+        "1 frozen banana",
+        "½ cup steel-cut oats",
+        "1 scoop of unflavoured whey protein",
+        "10g nut butter",
+        "½ cup spinach"
+      ],
+      "method": "Place the ingredients above into a NutriBullet or electric blender. Blend thoroughly.",
+      "cookingTime": "5 minutes",
+      "id": "HwczbZW"
+    },
+    {
+      "title": "trest",
+      "ingredients": [
+        "t",
+        "e",
+        "r"
+      ],
+      "method": "testing",
+      "cookingTime": "6 minutes",
+      "id": "ZzIGS8n"
+    },
+    {
+      "title": "vcvv",
+      "ingredients": [
+        "ggg",
+        "b"
+      ],
+      "method": "trr",
+      "cookingTime": "56 minutes",
+      "id": "dG2V-X2"
     }
   ]
 }

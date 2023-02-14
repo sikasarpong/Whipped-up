@@ -5,7 +5,7 @@ service cloud.firestore {
       // allow read, write: if
       //     request.time < timestamp.date(2023, 2, 25);
       // only auth
-      allow create: if request.auth != null;
+      allow create, write: if request.auth != null;
 
       // logged in user uid must match the document creator to read and delete
       allow read,delete: if request.auth.uid == resource.data.uid;
